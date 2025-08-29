@@ -22,5 +22,9 @@ class Musician(models.Model):
         from rest_framework.exceptions import ValidationError
 
         if self.age < 14:
-            raise ValidationError({"age": "Musicians must be at least 14 years old."})
+            raise ValidationError({
+                "age": (
+                    "Musicians must be at least 14 years old."
+                )
+            })
         super().save(*args, **kwargs)
