@@ -30,7 +30,7 @@ class MusicianDetail(APIView):
         musician = self.get_object(pk)
         if not musician:
             return Response(
-                {"error": "Musician not found"}, 
+                {"error": "Musician not found"},
                 status=status.HTTP_404_NOT_FOUND
             )
         serializer = MusicianSerializer(musician)
@@ -40,7 +40,7 @@ class MusicianDetail(APIView):
         musician = self.get_object(pk)
         if not musician:
             return Response(
-                {"error": "Musician not found"}, 
+                {"error": "Musician not found"},
                 status=status.HTTP_404_NOT_FOUND
             )
         serializer = MusicianSerializer(musician, data=request.data)
@@ -53,7 +53,7 @@ class MusicianDetail(APIView):
         musician = self.get_object(pk)
         if not musician:
             return Response(
-                {"error": "Musician not found"}, 
+                {"error": "Musician not found"},
                 status=status.HTTP_404_NOT_FOUND
             )
         serializer = MusicianSerializer(
@@ -73,7 +73,7 @@ class MusicianDetail(APIView):
         musician = self.get_object(pk)
         if not musician:
             return Response(
-                {"error": "Musician not found"}, 
+                {"error": "Musician not found"},
                 status=status.HTTP_404_NOT_FOUND
             )
         musician.delete()
